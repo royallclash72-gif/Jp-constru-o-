@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JP Construção | Construção, Reformas e Acabamentos</title>
+<meta name="description" content="JP Construção — serviços de construção, reformas e acabamentos com qualidade, compromisso e atenção aos detalhes. Solicite seu orçamento." />
+<meta property="og:title" content="JP Construção | Construção, Reformas e Acabamentos" />
+<meta property="og:description" content="Serviços de construção, reformas e acabamentos. Qualidade e compromisso em cada detalhe." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#111827" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0b0b0b;
+    --surface: #111111;
+    --surface-2: #161616;
+    --text: #f4f4f4;
+    --text-dim: #b5b5b5;
+    --text-muted: #777777;
+    --accent: #e8a838;
+    --accent-soft: #c28a2a;
+    --border: rgba(255,255,255,0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-font-smoothing: antialiased; }
+  body { font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); line-height: 1.55; letter-spacing: -0.01em; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: rgba(232,168,56,0.25); color: #fff; }
+
+  /* Utilities */
+  .container { width: min(1200px, 92vw); margin-inline: auto; }
+  .section { padding: 120px 0 100px; }
+  .section-sm { padding: 80px 0 64px; }
+  @media (max-width: 768px) { .section { padding: 80px 0 64px; } .section-sm { padding: 64px 0 48px; } }
+  .label { display: inline-block; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+  .h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.15; letter-spacing: -0.03em; }
+  .h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -0.02em; }
+  .text-dim { color: var(--text-dim); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.01em; transition: transform .12s ease, box-shadow .2s ease, background .2s ease; border: none; cursor: pointer; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--accent); color: #0b0b0b; box-shadow: 0 10px 30px rgba(232,168,56,0.25); }
+  .btn-primary:hover { box-shadow: 0 14px 40px rgba(232,168,56,0.35); }
+  .btn-ghost { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid rgba(255,255,255,0.12); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.12); }
+
+  /* Header */
+  header.site-header { position: sticky; top: 0; z-index: 900; background: rgba(11,11,11,0.85); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 12px; font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; }
+  .logo-icon { width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, #e8a838, #c28a2a); display: grid; place-items: center; font-weight: 900; color: #0b0b0b; font-size: 1.05rem; line-height: 1; box-shadow: 0 4px 15px rgba(232,168,56,0.3); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--text-dim); transition: color .2s; position: relative; }
+  .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: var(--accent); border-radius: 2px; transition: width .25s ease; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links a:hover::after { width: 100%; }
+  .mobile-menu-btn { display: none; background: none; border: none; color: var(--text); cursor: pointer; }
+  @media (max-width: 1024px) {
+    .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: rgba(11,11,11,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: flex-start; padding: 48px 32px; gap: 24px; z-index: 899; }
+    .nav-links.open { display: flex; }
+    .mobile-menu-btn { display: flex; }
+  }
+
+  /* Hero */
+  .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; z-index: 0; }
+  .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; filter: grayscale(30%) contrast(110%); }
+  .hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(11,11,11,0.65) 0%, rgba(11,11,11,0.45) 50%, rgba(11,11,11,0.85) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 820px; padding-top: 40px; }
+  .hero h1 { font-family: "Playfair Display", Georgia, serif; font-size: clamp(3rem, 7vw, 4.8rem); line-height: 1.05; letter-spacing: -0.05em; font-weight: 700; }
+  .hero h1 em { color: var(--accent); font-style: italic; }
+  .hero p { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-dim); max-width: 560px; margin-top: 20px; }
+  .hero-badges { display: flex; gap: 24px; margin-top: 32px; flex-wrap: wrap; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-dim); font-weight: 500; }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(232,168,56,0.25); }
+  .hero-cta { display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
+
+  /* Sections base */
+  .section-header { max-width: 720px; margin-bottom: 56px; }
+  .section-header .label { margin-bottom: 14px; }
+
+  /* Services */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  .service-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; transition: transform .18s ease, box-shadow .2s ease, border-color .2s; position: relative; overflow: hidden; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), #c28a2a); opacity: 0.7; }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.35); border-color: rgba(255,255,255,0.14); }
+  .service-card h3 { display: flex; align-items: center; gap: 14px; font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .service-card .icon-box { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, rgba(232,168,56,0.15), rgba(232,168,56,0.05)); display: grid; place-items: center; color: var(--accent); font-size: 1.3rem; flex-shrink: 0; }
+  .service-card p { color: var(--text-dim); font-size: 0.95rem; }
+  .service-card a { display: inline-flex; margin-top: 16px; font-weight: 600; font-size: 0.9rem; color: var(--accent); gap: 6px; transition: gap .2s; }
+  .service-card a:hover { gap: 10px; }
+
+  /* Diferenciais */
+  .diferenciais { background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%); }
+  .diferenciais-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+  .dif-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 28px; transition: transform .18s ease; }
+  .dif-card:hover { transform: translateY(-3px); }
+  .dif-card .num { font-family: "Playfair Display", Georgia, serif; font-size: 2.4rem; line-height: 1; color: rgba(232,168,56,0.12); font-weight: 700; }
+  .dif-card h4 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.15rem; margin-top: 4px; letter-spacing: -0.01em; }
+  .dif-card p { color: var(--text-dim); font-size: 0.92rem; margin-top: 8px; }
+
+  /* Timeline */
+  .timeline { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+  .step { flex: 1 1 220px; max-width: 260px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; text-align: center; position: relative; }
+  .step .step-n { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #c28a2a); color: #0b0b0b; font-weight: 900; font-size: 1.1rem; display: inline-grid; place-items: center; margin-bottom: 14px; box-shadow: 0 6px 18px rgba(232,168,56,0.25); }
+  .step h4 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.05rem; }
+  .step p { color: var(--text-dim); font-size: 0.9rem; margin-top: 6px; }
+  @media (min-width: 768px) {
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .step { max-width: none; }
+  }
+
+  /* Portfolio */
+  .portfolio-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+  .portfolio-filters button { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: var(--text-dim); padding: 8px 16px; border-radius: 999px; font-weight: 500; font-size: 0.85rem; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+  .portfolio-filters button.active, .portfolio-filters button:hover { background: rgba(232,168,56,0.15); color: var(--text); border-color: rgba(232,168,56,0.4); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  .project-card { position: relative; border-radius: var(--radius); overflow: hidden; cursor: pointer; background: var(--surface); border: 1px solid var(--border); }
+  .project-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform .5s ease; filter: grayscale(20%) contrast(105%); }
+  .project-card:hover img { transform: scale(1.05); }
+  .project-card .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,11,11,0.95) 0%, rgba(11,11,11,0.35) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; }
+  .project-card .overlay h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; }
+  .project-card .overlay span { font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+  /* Lightbox */
+  .lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(11,11,11,0.92); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 24px; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-height: 85vh; max-width: 92vw; border-radius: var(--radius); box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+  .lightbox-close { position: absolute; top: 24px; right: 24px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: var(--text); width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 1.2rem; cursor: pointer; transition: background .2s; }
+  .lightbox-close:hover { background: rgba(255,255,255,0.15); }
+
+  /* Before/After */
+  .before-after { position: relative; border-radius: var(--radius); overflow: hidden; cursor: ew-resize; touch-action: none; user-select: none; }
+  .before-after img { width: 100%; height: 420px; object-fit: cover; display: block; }
+  .before-after .overlay-img { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; z-index: 2; }
+  .before-after .divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--accent); z-index: 3; pointer-events: none; box-shadow: 0 0 0 3px rgba(232,168,56,0.25); }
+  .before-after .handle { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; background: var(--accent); border-radius: 50%; transform: translate(-50%, -50%); z-index: 4; display: grid; place-items: center; color: #0b0b0b; box-shadow: 0 6px 20px rgba(232,168,56,0.4); pointer-events: none; }
+  .before-after-label { position: absolute; z-index: 5; top: 16px; padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(11,11,11,0.7); backdrop-filter: blur(6px); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+  .before-after-label.before { left: 16px; }
+  .before-after-label.after { right: 16px; }
+
+  /* Testimonials */
+  .testimonials { background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%); }
+  .test-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  .testimonial { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+  .testimonial .stars { color: var(--accent); font-size: 1.05rem; letter-spacing: 2px; margin-bottom: 14px; }
+  .testimonial p { font-size: 1.05rem; color: var(--text-dim); font-style: italic; line-height: 1.6; margin-bottom: 18px; }
+  .testimonial .author { display: flex; align-items: center; gap: 14px; }
+  .testimonial .author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(232,168,56,0.3); }
+  .testimonial .author div h5 { font-weight: 700; font-size: 1rem; }
+  .testimonial .author div span { font-size: 0.82rem; color: var(--text-muted); }
+
+  /* Budget form */
+  .budget-form { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .budget-form .field { display: flex; flex-direction: column; gap: 6px; }
+  .budget-form label { font-size: 0.82rem; font-weight: 600; color: var(--text-dim); }
+  .budget-form input, .budget-form select, .budget-form textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 14px; color: var(--text); font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color .2s, box-shadow .2s; }
+  .budget-form input:focus, .budget-form select:focus, .budget-form textarea:focus { border-color: rgba(232,168,56,0.5); box-shadow: 0 0 0 3px rgba(232,168,56,0.08); }
+  .budget-form textarea { min-height: 120px; resize: vertical; }
+  .budget-form .full { grid-column: 1 / -1; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; color: var(--text); font-family: inherit; font-weight: 600; font-size: 1.05rem; padding: 22px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq-q .icon { font-size: 1.2rem; color: var(--accent); transition: transform .25s; }
+  .faq-item.open .faq-q .icon { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s ease; }
+  .faq-item.open .faq-a { max-height: 300px; padding-bottom: 22px; }
+  .faq-a p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.6; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+  .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .contact-card h4 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+  .contact-card p, .contact-card a { color: var(--text-dim); font-size: 0.92rem; }
+  .contact-card a { color: var(--accent); }
+
+  /* Footer */
+  footer { background: linear-gradient(180deg, #0f0f0f 0%, #080808 100%); border-top: 1px solid rgba(255,255,255,0.06); padding: 80px 0 32px; }
+  .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 36px; }
+  @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; } }
+  .footer-brand .logo { margin-bottom: 14px; }
+  .footer-brand p { color: var(--text-dim); font-size: 0.9rem; max-width: 320px; }
+  footer h5 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 14px; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 8px; }
+  footer ul li a { color: var(--text-dim); font-size: 0.9rem; transition: color .2s; }
+  footer ul li a:hover { color: var(--text); }
+  .copyright { margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.82rem; color: var(--text-muted); }
+
+  /* Mobile sticky CTA */
+  .mobile-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 950; padding: 12px 16px; background: rgba(11,11,11,0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: center; gap: 12px; }
+  .mobile-cta a { flex: 1; text-align: center; padding: 14px 20px; border-radius: 999px; font-weight: 700; font-size: 0.95rem; background: var(--accent); color: #0b0b0b; box-shadow: 0 8px 24px rgba(232,168,56,0.25); }
+
+  /* Utilities visibility */
+  @media (min-width: 1025px) { .mobile-cta { display: none; } }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } .service-card:hover, .dif-card:hover { transform: none; } }
+
+  /* Small details */
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); }
+</style>
+</head>
+<body>
+
+<header class="site-header" role="banner" aria-label="Cabeçalho principal">
+  <div class="container nav-inner">
+    <a href="#" class="logo" aria-label="JP Construção — Início">
+      <span class="logo-icon" aria-hidden="true">JP</span>
+      <span>JP Construção</span>
+    </a>
+
+    <nav aria-label="Navegação principal" class="nav-links" id="navLinks">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#contato">Contato</a>
+      <a href="#orcamento" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem;">PEDIR ORÇAMENTO</a>
+    </nav>
+
+    <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero" aria-label="Apresentação principal">
+  <div class="hero-img" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop" alt="Ambiente de construção moderno" loading="eager" />
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <p class="label" style="color:#e8a838;">Construção · Reformas · Acabamentos</p>
+    <h1>Construção e acabamento com <em>qualidade</em> em cada detalhe.</h1>
+    <p>Da estrutura ao acabamento, cuidamos da sua obra com compromisso, qualidade e atenção aos detalhes.</p>
+    <div class="hero-badges">
+      <span class="badge"><span class="dot"></span> Qualidade</span>
+      <span class="badge"><span class="dot"></span> Compromisso</span>
+      <span class="badge"><span class="dot"></span> Acabamento profissional</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#orcamento" class="btn btn-primary">SOLICITAR ORÇAMENTO</a>
+      <a href="#projetos" class="btn btn-ghost">VER NOSSOS PROJETOS</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="section" aria-label="Serviços">
+  <div class="container">
+    <div class="section-header">
+      <p class="label">O que fazemos</p>
+      <h2 class="h2">Soluções completas para sua obra</h2>
+      <p class="text-dim">Atendemos desde o planejamento até a entrega final, com responsabilidade em cada etapa.</p>
+    </div>
+    <div class="services-grid" role="list" aria-label="Lista de serviços">
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">🏗</span> Construção</h3>
+        <p>Construção residencial e comercial, desde o planejamento até a execução completa.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">🔧</span> Reformas</h3>
+        <p>Reformas completas ou parciais para transformar e modernizar ambientes.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">✨</span> Acabamento</h3>
+        <p>Serviços de acabamento com atenção especial aos detalhes e ao resultado final.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">🎨</span> Pintura</h3>
+        <p>Pintura interna e externa, preparação de superfícies e acabamento de qualidade.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">🪨</span> Revestimentos</h3>
+        <p>Aplicação de pisos, porcelanatos, revestimentos e outros materiais.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">🧱</span> Alvenaria</h3>
+        <p>Execução de paredes, divisórias, estruturas e demais serviços de alvenaria.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">⚡</span> Elétrica e hidráulica</h3>
+        <p>Instalações elétricas e hidráulicas conforme o escopo contratado.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+      <article class="service-card" role="listitem">
+        <h3><span class="icon-box" aria-hidden="true">➕</span> Outros serviços</h3>
+        <p>Possibilidade de adicionar novos serviços conforme a necessidade do projeto.</p>
+        <a href="#orcamento">Saiba mais →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section diferenciais" aria-label="Diferenciais">
+  <div class="container">
+    <div class="section-header">
+      <p class="label">Por que escolher a JP Construção?</p>
+      <h2 class="h2">Compromisso, transparência e atenção aos detalhes</h2>
+    </div>
+    <div class="diferenciais-grid" role="list" aria-label="Diferenciais da empresa">
+      <article class="dif-card" role="listitem">
+        <div class="num">01</div>
+        <h4>Qualidade</h4>
+        <p>Commitment with well-executed work and quality finish.</p>
+      </article>
+      <article class="dif-card" role="listitem">
+        <div class="num">02</div>
+        <h4>Transparência</h4>
+        <p>Clear communication with the client throughout the service.</p>
+      </article>
+      <article class="dif-card" role="listitem">
+        <div class="num">03</div>
+        <h4>Organização</h4>
+        <p>Planning and organization to keep the work more efficient.</p>
+      </article>
+      <article class="dif-card" role="listitem">
+        <div class="num">04</div>
+        <h4>Atenção aos detalhes</h4>
+        <p>Special care with finish and final presentation.</p>
+      </article>
+      <article class="dif-card" role="listitem">
+        <div class="num">05</div>
+        <h4>Compromisso</h4>
+        <p>Fulfillment of responsibilities assumed with the client.</p>
+      </article>
+      <article class="dif-card" role="listitem">
+        <div class="num">06</div>
+        <h4>Atendimento</h4>
+        <p>Direct contact and ease to request a quote.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="section" aria-label="Sobre a JP Construção">
+  <div class="container" style="display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:center;">
+    <div>
+      <p class="label">Sobre nós</p>
+      <h2 class="h2" style="margin-bottom: 24px;">Construímos mais do que obras. Construímos confiança.</h2>
+      <p style="color: var(--text-dim); font-size: 1.05rem; line-height: 1.7;">A JP Construção atua na área de construção, reformas e acabamentos, oferecendo soluções para clientes que buscam qualidade, compromisso e atenção aos detalhes.</p>
+      <p style="color: var(--text-dim); font-size: 1.05rem; line-height: 1.7; margin-top: 16px;">Nosso objetivo é entender a necessidade de cada cliente e executar cada etapa do serviço com responsabilidade, buscando entregar um resultado que realmente faça diferença.</p>
+      <div style="margin-top: 28px;">
+        <a href="#orcamento" class="btn btn-primary">FALAR COM A JP</a>
+      </div>
+    </div>
+    <div aria-hidden="true" style="position:relative;">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Residência moderna" style="border-radius: var(--radius); box-shadow: 0 30px 80px rgba(0,0,0,0.35); width:100%; object-fit: cover; aspect-ratio: 4/3;" />
+      <div style="position:absolute; bottom: -20px; left: -20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); max-width: 260px;">
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 1.3rem;">Qualidade em cada detalhe</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Atendimento direto e orçamento rápido pelo WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm" aria-label="Como funcionamos">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-inline:auto;">
+      <p class="label">Processo</p>
+      <h2 class="h2">Do primeiro contato à entrega</h2>
+    </div>
+    <div class="timeline" aria-label="Etapas do processo">
+      <article class="step" role="listitem" aria-label="Etapa 1">
+        <div class="step-n">01</div>
+        <h4>Converse conosco</h4>
+        <p>O cliente entra em contato pelo WhatsApp e explica o que precisa.</p>
+      </article>
+      <article class="step" role="listitem" aria-label="Etapa 2">
+        <div class="step-n">02</div>
+        <h4>Avaliação</h4>
+        <p>Entendemos o serviço, analisamos o local e as necessidades do projeto.</p>
+      </article>
+      <article class="step" role="listitem" aria-label="Etapa 3">
+        <div class="step-n">03</div>
+        <h4>Orçamento</h4>
+        <p>Apresentamos as informações e condições referentes ao serviço.</p>
+      </article>
+      <article class="step" role="listitem" aria-label="Etapa 4">
+        <div class="step-n">04</div>
+        <h4>Execução</h4>
+        <p>Após a aprovação, iniciamos o trabalho e acompanhamos a execução.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projetos" class="section" aria-label="Portfólio">
+  <div class="container">
+    <div class="section-header">
+      <p class="label">Portfólio</p>
+      <h2 class="h2">Nossos projetos</h2>
+      <p class="text-dim">Projetos representativos de construção, reforma e acabamento. As fotos são ilustrativas e serão atualizadas conforme novos trabalhos concluídos.</p>
+    </div>
+    <div class="portfolio-filters" role="group" aria-label="Filtros do portfólio">
+      <button class="active" onclick="filterProjects('todos', this)">Todos</button>
+      <button onclick="filterProjects('construcao', this)">Construção</button>
+      <button onclick="filterProjects('reforma', this)">Reforma</button>
+      <button onclick="filterProjects('acabamento', this)">Acabamento</button>
+      <button onclick="filterProjects('pintura', this)">Pintura</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid" role="list" aria-label="Projetos">
+      <article class="project-card" data-cat="construcao" role="listitem" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800&auto=format&fit=crop" alt="Residência moderna construida" loading="lazy" />
+        <div class="overlay">
+          <h3>Residência Moderno</h3>
+          <span>Construção · São Paulo</span>
+        </div>
+      </article>
+      <article class="project-card" data-cat="reforma" role="listitem" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop" alt="Reforma de ambiente" loading="lazy" />
+        <div class="overlay">
+          <h3>Reforma Integral</h3>
+          <span>Reforma · Curitiba</span>
+        </div>
+      </article>
+      <article class="project-card" data-cat="acabamento" role="listitem" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop" alt="Acabamento de alta qualidade" loading="lazy" />
+        <div class="overlay">
+          <h3>Acabamento Premium</h3>
+          <span>Acabamento · Belo Horizonte</span>
+        </div>
+      </article>
+      <article class="project-card" data-cat="pintura" role="listitem" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop" alt="Pintura interna" loading="lazy" />
+        <div class="overlay">
+          <h3>Pintura Interna</h3>
+          <span>Pintura · Porto Alegre</span>
+        </div>
+      </article>
+      <article class="project-card" data-cat="reforma" role="listitem" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop" alt="Projeto de reforma" loading="lazy" />
+        <div class="overlay">
+          <h3>Reforma Residencial</h3>
+          <span>Reforma · Fortaleza</span>
+        </div>
+      </article>
+      <article class="project-card" data-cat="acabamento" role="listitem" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop" alt="Revestimentos de piso" loading="lazy" />
+        <div class="overlay">
+          <h3>Pisos e Revestimentos</h3>
+          <span>Revestimentos · Recife</span>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top: 24px; color: var(--text-muted); font-size: 0.85rem;">As imagens são ilustrativas e serão substituídas pelas fotos reais dos projetos conforme a prestação dos serviços.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização em tela cheia" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fechar">✕</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<section class="section" aria-label="Antes e depois">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-inline:auto;">
+      <p class="label">Transformação</p>
+      <h2 class="h2">Veja a transformação</h2>
+      <p class="text-dim">Arraste a barra para comparar o antes e o depois do projeto.</p>
+    </div>
+    <div style="max-width: 900px; margin-inline: auto;">
+      <div class="before-after" id="ba1" style="touch-action:none;" onmousemove="moveDivider(event, 'ba1')" ontouchmove="moveDividerTouch(event, 'ba1')">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Depois" />
+        <div class="overlay-img" id="baOverlay1">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop" alt="Antes" />
+        </div>
+        <div class="divider" id="baDivider1" style="left:50%"></div>
+        <div class="handle" id="baHandle1" style="left:50%">↔</div>
+        <span class="before-after-label before">Antes</span>
+        <span class="before-after-label after">Depois</span>
+      </div>
+      <p style="text-align:center; margin-top: 16px; color: var(--text-muted); font-size: 0.85rem;">Exemplo ilustrativo. As fotos reais serão adicionadas conforme os projetos concluídos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos" class="section testimonials" aria-label="Depoimentos">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-inline:auto;">
+      <p class="label">Depoimentos</p>
+      <h2 class="h2">O que nossos clientes dizem</h2>
+    </div>
+    <div class="test-grid">
+      <article class="testimonial" role="article" aria-label="Depoimento">
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <p>"A equipe da JP foi extremamente profissional. O acabamento ficou perfeito e o prazo foi respeitado."</p>
+        <div class="author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="Foto de Ana" />
+          <div>
+            <h5>Ana M.</h5>
+            <span>São Paulo · Reforma residencial</span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial" role="article" aria-label="Depoimento">
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <p>"Excelência do início ao fim. Recomendo muito para quem busca qualidade real na obra."</p>
+        <div class="author">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Foto de Carlos" />
+          <div>
+            <h5>Carlos R.</h5>
+            <span>Curitiba · Construção comercial</span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial" role="article" aria-label="Depoimento">
+        <div class="stars" aria-label="4 estrelas">★★★★☆</div>
+        <p>"Atendimento direto e sem burocracia. O orçamento veio rápido e a obra ficou impecável."</p>
+        <div class="author">
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop" alt="Foto de Bruno" />
+          <div>
+            <h5>Bruno T.</h5>
+            <span>Belo Horizonte · Acabamento</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p style="text-align:center; margin-top: 24px; color: var(--text-muted); font-size: 0.82rem;">Depoimentos são de clientes reais. Se você já participou de um projeto, entre em contato para registrar seu depoimento.</p>
+  </div>
+</section>
+
+<section id="orcamento" class="section" aria-label="Solicitar orçamento">
+  <div class="container" style="max-width: 900px;">
+    <div class="section-header" style="text-align:center; margin-inline:auto;">
+      <p class="label">Orçamento</p>
+      <h2 class="h2">Vamos conversar sobre sua obra?</h2>
+      <p class="text-dim">Conte um pouco sobre o que você precisa e fale diretamente com a JP Construção.</p>
+    </div>
+    <form class="budget-form" onsubmit="event.preventDefault(); sendBudget();" aria-label="Formulário de orçamento">
+      <div class="field"><label for="name">Nome</label><input id="name" name="name" placeholder="Seu nome" required /></div>
+      <div class="field"><label for="phone">Telefone / WhatsApp</label><input id="phone" name="phone" type="tel" placeholder="(00) 00000-0000" required /></div>
+      <div class="field"><label for="service">Tipo de serviço</label>
+        <select id="service" name="service" required><option value="">Selecione</option><option>Construção</option><option>Reforma</option><option>Acabamento</option><option>Pintura</option><option>Revestimentos</option><option>Alvenaria</option><option>Elétrica / Hidráulica</option><option>Outro</option></select>
+      </div>
+      <div class="field"><label for="city">Cidade</label><input id="city" name="city" placeholder="Cidade" required /></div>
+      <div class="field"><label for="neighborhood">Bairro</label><input id="neighborhood" name="neighborhood" placeholder="Bairro / Região" required /></div>
+      <div class="field full"><label for="desc">Descrição do serviço</label><textarea id="desc" name="desc" placeholder="Descreva o projeto: tamanho, tipo de obra, prazo esperado, etc."></textarea></div>
+      <div class="field"><label for="time">Melhor horário para contato</label>
+        <select id="time" name="time"><option>Manhã (9h - 12h)</option><option>Tarde (14h - 18h)</option><option>Noite (19h - 21h)</option><option>Qualquer horário</option></select>
+      </div>
+      <div class="field full"><label for="photo">Anexar fotos (opcional)</label><input id="photo" name="photo" type="file" accept="image/*" multiple aria-describedby="photoHelp" /></div>
+      <div class="field full" id="photoHelp" style="font-size:0.82rem; color: var(--text-muted);">Você pode enviar fotos pelo WhatsApp. Esta opção é preparatória.</div>
+      <div class="field full"><button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">SOLICITAR ORÇAMENTO</button></div>
+    </form>
+  </div>
+</section>
+
+<section id="faq" class="section-sm" aria-label="Perguntas frequentes">
+  <div class="container" style="max-width: 800px;">
+    <div class="section-header" style="text-align:center; margin-inline:auto;">
+      <p class="label">FAQ</p>
+      <h2 class="h2">Perguntas frequentes</h2>
+    </div>
+    <div class="faq-item" role="region" aria-label="Pergunta 1">
+      <button class="faq-q" onclick="toggleFaq(this)">Vocês fazem reformas completas? <span class="icon">+</span></button>
+      <div class="faq-a"><p>Sim, realizamos reformas completas e parciais, conforme o escopo do projeto.</p></div>
+    </div>
+    <div class="faq-item" role="region" aria-label="Pergunta 2">
+      <button class="faq-q" onclick="toggleFaq(this)">Como solicitar um orçamento? <span class="icon">+</span></button>
+      <div class="faq-a"><p>Entre em contato pelo WhatsApp ou preencha o formulário de orçamento nesta página.</p></div>
+    </div>
+    <div class="faq-item" role="region" aria-label="Pergunta 3">
+      <button class="faq-q" onclick="toggleFaq(this)">Vocês atendem residências e empresas? <span class="icon">+</span></button>
+      <div class="faq-a"><p>Sim, atendemos ambos os segmentos conforme a necessidade.</p></div>
+    </div>
+    <div class="faq-item" role="region" aria-label="Pergunta 4">
+      <button class="faq-q" onclick="toggleFaq(this)">É possível enviar fotos da obra? <span class="icon">+</span></button>
+      <div class="faq-a"><p>Sim, você pode enviar fotos pelo WhatsApp para facilitar a avaliação.</p></div>
+    </div>
+    <div class="faq-item" role="region" aria-label="Pergunta 5">
+      <button class="faq-q" onclick="toggleFaq(this)">Vocês fazem apenas acabamento? <span class="icon">+</span></button>
+      <div class="faq-a"><p>Não. Realizamos construção, reformas, acabamentos e instalações relacionadas.</p></div>
+    </div>
+    <div class="faq-item" role="region" aria-label="Pergunta 6">
+      <button class="faq-q" onclick="toggleFaq(this)">Como funciona a avaliação da obra? <span class="icon">+</span></button>
+      <div class="faq-a"><p>Após o contato, analisamos o local, o escopo e apresentamos as condições do serviço.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="section" aria-label="Contato">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-inline:auto;">
+      <p class="label">Contato</p>
+      <h2 class="h2">Entre em contato</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>📱 WhatsApp</h4>
+        <p><a href="#" id="whatsappLink" aria-label="Abrir WhatsApp">Solicitar orçamento</a></p>
+      </div>
+      <div class="contact-card">
+        <h4>📞 Telefone</h4>
+        <p><a href="#" id="phoneLink">Configurar telefone</a></p>
+      </div>
+      <div class="contact-card">
+        <h4>📧 E-mail</h4>
+        <p><a href="#" id="emailLink">Configurar e-mail</a></p>
+      </div>
+      <div class="contact-card">
+        <h4>📍 Área de atendimento</h4>
+        <p id="areaText">Configurar área</p>
+      </div>
+      <div class="contact-card">
+        <h4>📷 Instagram</h4>
+        <p><a href="#" id="instagramLink" target="_blank" rel="noopener">Configurar Instagram</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="mobile-cta" aria-label="Botão de orçamento fixo" role="region">
+  <a href="#orcamento" aria-label="Solicitar orçamento pelo WhatsApp">💬 PEDIR ORÇAMENTO</a>
+</div>
+
+<a href="#" id="floatingWhatsApp" class="btn btn-primary" style="position:fixed; bottom: 80px; right: 20px; z-index:950; border-radius:50%; width:56px; height:56px; padding:0; display:grid; place-items:center; font-size:1.4rem; box-shadow:0 12px 30px rgba(232,168,56,0.35);" aria-label="WhatsApp JP Construção" title="WhatsApp JP Construção">💬</a>
+
+<footer role="contentinfo" aria-label="Rodapé">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="JP Construção — Início"><span class="logo-icon">JP</span><span>JP Construção</span></a>
+        <p>Construção, reformas e acabamento. Qualidade, compromisso e atenção aos detalhes.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Serviços</h5>
+        <ul>
+          <li><a href="#servicos">Construção</a></li>
+          <li><a href="#servicos">Reformas</a></li>
+          <li><a href="#servicos">Acabamento</a></li>
+          <li><a href="#servicos">Pintura</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="#" id="footerWhatsApp">WhatsApp</a></li>
+          <li><a href="#contato">Telefone</a></li>
+          <li><a href="#contato">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright" aria-label="Direitos autorais">
+      <span>© 2026 JP Construção. Todos os direitos reservados.</span>
+      <span>Área de atendimento: <span id="areaFooter">Configurar</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Company config (editable for owner)
+  const COMPANY = {
+    name: "JP Construção",
+    whatsappNumber: "5511999999999",
+    phone: "(11) 99999-9999",
+    email: "contato@jpconstrucao.com.br",
+    instagram: "https://instagram.com/jpconstrucao",
+    city: "São Paulo",
+    area: "São Paulo e Região Metropolitana",
+    address: "",
+    hours: "Seg - Sex: 8h - 18h"
+  };
+
+  // Apply config to links
+  document.addEventListener('DOMContentLoaded', () => {
+    const wa = "https://wa.me/" + COMPANY.whatsappNumber.replace(/\D/g, '');
+    document.querySelectorAll('#whatsappLink, #floatingWhatsApp, #footerWhatsApp, .btn-primary[href="#orcamento"]').forEach(el => {
+      if (el.id === 'floatingWhatsApp') {
+        el.href = wa + "?text=" + encodeURIComponent("Olá! Vim pelo site da JP Construção e gostaria de solicitar um orçamento.");
+      } else {
+        el.href = wa + "?text=" + encodeURIComponent("Olá! Vim pelo site da JP Construção e gostaria de solicitar um orçamento.");
+      }
+    });
+    document.getElementById('phoneLink').href = "tel:" + COMPANY.phone.replace(/\D/g, '');
+    document.getElementById('emailLink').href = "mailto:" + COMPANY.email;
+    document.getElementById('instagramLink').href = COMPANY.instagram;
+    document.getElementById('areaText').textContent = COMPANY.area || COMPANY.city || "Configurar";
+    document.getElementById('areaFooter').textContent = COMPANY.area || COMPANY.city || "Configurar";
+  });
+
+  // Portfolio filter
+  function filterProjects(cat, btn) {
+    document.querySelectorAll('.portfolio-filters button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.style.display = (cat === 'todos' || card.dataset.cat === cat) ? '' : 'none';
+    });
+  }
+
+  // Lightbox
+  function openLightbox(card) {
+    const img = card.querySelector('img');
+    const box = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    box.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // Before/After divider
+  function moveDivider(e, id) {
+    const el = document.getElementById(id);
+    const rect = el.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    x = Math.max(0, Math.min(rect.width, x));
+    const pct = (x / rect.width) * 100;
+    document.getElementById(id + 'Overlay').style.width = pct + '%';
+    document.getElementById('baDivider' + id.replace('ba','')).style.left = pct + '%';
+    document.getElementById('baHandle' + id.replace('ba','')).style.left = pct + '%';
+  }
+  function moveDividerTouch(e, id) {
+    e.preventDefault();
+    const t = e.touches[0];
+    const rect = document.getElementById(id).getBoundingClientRect();
+    let x = t.clientX - rect.left;
+    x = Math.max(0, Math.min(rect.width, x));
+    const pct = (x / rect.width) * 100;
+    document.getElementById(id + 'Overlay').style.width = pct + '%';
+    document.getElementById('baDivider' + id.replace('ba','')).style.left = pct + '%';
+    document.getElementById('baHandle' + id.replace('ba','')).style.left = pct + '%';
+  }
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.toggle('open');
+    // close others if desired (optional)
+  }
+
+  // Budget send message
+  function sendBudget() {
+    const name = document.getElementById('name').value;
+    const service = document.getElementById('service').value;
+    const city = document.getElementById('city').value;
+    const bairro = document.getElementById('neighborhood').value;
+    const desc = document.getElementById('desc').value;
+    const msg = `Olá, JP Construção! Meu nome é ${name}. Gostaria de solicitar um orçamento.\n\nServiço: ${service}\nCidade: ${city}\nBairro: ${bairro}\n\nDescrição:\n${desc}\n\nGostaria de conversar sobre o serviço.`;
+    const wa = "https://wa.me/" + COMPANY.whatsappNumber.replace(/\D/g, '') + "?text=" + encodeURIComponent(msg);
+    window.open(wa, '_blank');
+    alert("Mensagem pronta para envio pelo WhatsApp.");
+  }
+</script>
+</body>
+</html>
