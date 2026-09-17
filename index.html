@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>JP Construção | Construção, Reformas e Acabamentos</title>
-<meta name="description" content="JP Construção — serviços de construção, reformas e acabamentos com qualidade, compromisso e atenção aos detalhes. Solicite seu orçamento." />
-<meta property="og:title" content="JP Construção | Construção, Reformas e Acabamentos" />
+<title>JP Construções | Construção, Reformas e Acabamentos</title>
+<meta name="description" content="JP Construções — serviços de construção, reformas e acabamentos com qualidade, compromisso e atenção aos detalhes. Solicite seu orçamento." />
+<meta property="og:title" content="JP Construções | Construção, Reformas e Acabamentos" />
 <meta property="og:description" content="Serviços de construção, reformas e acabamentos. Qualidade e compromisso em cada detalhe." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#111827" />
@@ -61,7 +61,7 @@
   .nav-links a:hover::after { width: 100%; }
   .mobile-menu-btn { display: none; background: none; border: none; color: var(--text); cursor: pointer; }
   @media (max-width: 1024px) {
-    .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: rgba(11,11,11,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: flex-start; padding: 48px 32px; gap: 24px; z-index: 899; }
+    .nav-links { display: none; position: absolute; top: calc(100% + 1px); left: 0; right: 0; background: #0b0b0b; flex-direction: column; align-items: flex-start; padding: 32px 28px; gap: 18px; z-index: 1000; overflow-y: auto; max-height: 80vh; box-shadow: 0 20px 60px rgba(0,0,0,0.6); border-top: 1px solid rgba(255,255,255,0.08); }
     .nav-links.open { display: flex; }
     .mobile-menu-btn { display: flex; }
   }
@@ -211,9 +211,9 @@
 
 <header class="site-header" role="banner" aria-label="Cabeçalho principal">
   <div class="container nav-inner">
-    <a href="#" class="logo" aria-label="JP Construção — Início">
+    <a href="#" class="logo" aria-label="JP Construções — Início">
       <span class="logo-icon" aria-hidden="true">JP</span>
-      <span>JP Construção</span>
+      <span>JP Construções</span>
     </a>
 
     <nav aria-label="Navegação principal" class="nav-links" id="navLinks">
@@ -309,7 +309,7 @@
 <section class="section diferenciais" aria-label="Diferenciais">
   <div class="container">
     <div class="section-header">
-      <p class="label">Por que escolher a JP Construção?</p>
+      <p class="label">Por que escolher a JP Construções?</p>
       <h2 class="h2">Compromisso, transparência e atenção aos detalhes</h2>
     </div>
     <div class="diferenciais-grid" role="list" aria-label="Diferenciais da empresa">
@@ -347,12 +347,12 @@
   </div>
 </section>
 
-<section id="sobre" class="section" aria-label="Sobre a JP Construção">
+<section id="sobre" class="section" aria-label="Sobre a JP Construções">
   <div class="container" style="display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:center;">
     <div>
       <p class="label">Sobre nós</p>
       <h2 class="h2" style="margin-bottom: 24px;">Construímos mais do que obras. Construímos confiança.</h2>
-      <p style="color: var(--text-dim); font-size: 1.05rem; line-height: 1.7;">A JP Construção atua na área de construção, reformas e acabamentos, oferecendo soluções para clientes que buscam qualidade, compromisso e atenção aos detalhes.</p>
+      <p style="color: var(--text-dim); font-size: 1.05rem; line-height: 1.7;">A JP Construções atua há <strong>10 anos</strong> na área de construção, reformas e acabamentos, oferecendo soluções para clientes que buscam qualidade, compromisso e atenção aos detalhes.</p>
       <p style="color: var(--text-dim); font-size: 1.05rem; line-height: 1.7; margin-top: 16px;">Nosso objetivo é entender a necessidade de cada cliente e executar cada etapa do serviço com responsabilidade, buscando entregar um resultado que realmente faça diferença.</p>
       <div style="margin-top: 28px;">
         <a href="#orcamento" class="btn btn-primary">FALAR COM A JP</a>
@@ -418,7 +418,7 @@
         <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800&auto=format&fit=crop" alt="Residência moderna construida" loading="lazy" />
         <div class="overlay">
           <h3>Residência Moderno</h3>
-          <span>Construção · São Paulo</span>
+          <span>Construção · Várzea Grande - MT</span>
         </div>
       </article>
       <article class="project-card" data-cat="reforma" role="listitem" onclick="openLightbox(this)">
@@ -503,7 +503,7 @@
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="Foto de Ana" />
           <div>
             <h5>Ana M.</h5>
-            <span>São Paulo · Reforma residencial</span>
+            <span>Várzea Grande - MT · Reforma residencial</span>
           </div>
         </div>
       </article>
@@ -539,7 +539,7 @@
     <div class="section-header" style="text-align:center; margin-inline:auto;">
       <p class="label">Orçamento</p>
       <h2 class="h2">Vamos conversar sobre sua obra?</h2>
-      <p class="text-dim">Conte um pouco sobre o que você precisa e fale diretamente com a JP Construção.</p>
+      <p class="text-dim">Conte um pouco sobre o que você precisa e fale diretamente com a JP Construções.</p>
     </div>
     <form class="budget-form" onsubmit="event.preventDefault(); sendBudget();" aria-label="Formulário de orçamento">
       <div class="field"><label for="name">Nome</label><input id="name" name="name" placeholder="Seu nome" required /></div>
@@ -617,8 +617,8 @@
         <p id="areaText">Configurar área</p>
       </div>
       <div class="contact-card">
-        <h4>📷 Instagram</h4>
-        <p><a href="#" id="instagramLink" target="_blank" rel="noopener">Configurar Instagram</a></p>
+        <h4>📍 Área de atendimento</h4>
+        <p id="areaText">Configurar área</p>
       </div>
     </div>
   </div>
@@ -630,13 +630,13 @@
   <a href="#orcamento" aria-label="Solicitar orçamento pelo WhatsApp">💬 PEDIR ORÇAMENTO</a>
 </div>
 
-<a href="#" id="floatingWhatsApp" class="btn btn-primary" style="position:fixed; bottom: 80px; right: 20px; z-index:950; border-radius:50%; width:56px; height:56px; padding:0; display:grid; place-items:center; font-size:1.4rem; box-shadow:0 12px 30px rgba(232,168,56,0.35);" aria-label="WhatsApp JP Construção" title="WhatsApp JP Construção">💬</a>
+<a href="#" id="floatingWhatsApp" class="btn btn-primary" style="position:fixed; bottom: 80px; right: 20px; z-index:950; border-radius:50%; width:56px; height:56px; padding:0; display:grid; place-items:center; font-size:1.4rem; box-shadow:0 12px 30px rgba(232,168,56,0.35);" aria-label="WhatsApp JP Construções" title="WhatsApp JP Construções">💬</a>
 
 <footer role="contentinfo" aria-label="Rodapé">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo" aria-label="JP Construção — Início"><span class="logo-icon">JP</span><span>JP Construção</span></a>
+        <a href="#" class="logo" aria-label="JP Construções — Início"><span class="logo-icon">JP</span><span>JP Construções</span></a>
         <p>Construção, reformas e acabamento. Qualidade, compromisso e atenção aos detalhes.</p>
       </div>
       <div>
@@ -669,7 +669,7 @@
       </div>
     </div>
     <div class="copyright" aria-label="Direitos autorais">
-      <span>© 2026 JP Construção. Todos os direitos reservados.</span>
+      <span>© 2026 JP Construções. Todos os direitos reservados.</span>
       <span>Área de atendimento: <span id="areaFooter">Configurar</span></span>
     </div>
   </div>
@@ -678,13 +678,13 @@
 <script>
   // Company config (editable for owner)
   const COMPANY = {
-    name: "JP Construção",
-    whatsappNumber: "5511999999999",
-    phone: "(11) 99999-9999",
+    name: "JP Construções",
+    whatsappNumber: "5565992418456",
+    phone: "(65) 99241-8456",
     email: "contato@jpconstrucao.com.br",
-    instagram: "https://instagram.com/jpconstrucao",
-    city: "São Paulo",
-    area: "São Paulo e Região Metropolitana",
+    instagram: "",
+    city: "Várzea Grande - MT",
+    area: "Várzea Grande - MT e Região Metropolitana",
     address: "",
     hours: "Seg - Sex: 8h - 18h"
   };
@@ -694,9 +694,9 @@
     const wa = "https://wa.me/" + COMPANY.whatsappNumber.replace(/\D/g, '');
     document.querySelectorAll('#whatsappLink, #floatingWhatsApp, #footerWhatsApp, .btn-primary[href="#orcamento"]').forEach(el => {
       if (el.id === 'floatingWhatsApp') {
-        el.href = wa + "?text=" + encodeURIComponent("Olá! Vim pelo site da JP Construção e gostaria de solicitar um orçamento.");
+        el.href = wa + "?text=" + encodeURIComponent("Olá! Vim pelo site da JP Construções e gostaria de solicitar um orçamento.");
       } else {
-        el.href = wa + "?text=" + encodeURIComponent("Olá! Vim pelo site da JP Construção e gostaria de solicitar um orçamento.");
+        el.href = wa + "?text=" + encodeURIComponent("Olá! Vim pelo site da JP Construções e gostaria de solicitar um orçamento.");
       }
     });
     document.getElementById('phoneLink').href = "tel:" + COMPANY.phone.replace(/\D/g, '');
@@ -768,7 +768,7 @@
     const city = document.getElementById('city').value;
     const bairro = document.getElementById('neighborhood').value;
     const desc = document.getElementById('desc').value;
-    const msg = `Olá, JP Construção! Meu nome é ${name}. Gostaria de solicitar um orçamento.\n\nServiço: ${service}\nCidade: ${city}\nBairro: ${bairro}\n\nDescrição:\n${desc}\n\nGostaria de conversar sobre o serviço.`;
+    const msg = `Olá, JP Construções! Meu nome é ${name}. Gostaria de solicitar um orçamento.\n\nServiço: ${service}\nCidade: ${city}\nBairro: ${bairro}\n\nDescrição:\n${desc}\n\nGostaria de conversar sobre o serviço.`;
     const wa = "https://wa.me/" + COMPANY.whatsappNumber.replace(/\D/g, '') + "?text=" + encodeURIComponent(msg);
     window.open(wa, '_blank');
     alert("Mensagem pronta para envio pelo WhatsApp.");
